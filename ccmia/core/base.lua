@@ -70,46 +70,13 @@ ccmia.GeneralPackage = function (src)
 	return model
 end
 
--- Given a set or list of GeneralPackage structures, confirm that the configuration is valid. If it isn't, returns a string.
-ccmia.checkPackages = function (packages, bsp)
-	local why = {}
-	local provided = {}
-	local providedWho = {}
-	local hasName = {}
-	for _, pkg in pairs(packages) do
-		if hasName[pkg.name] then
-			table.insert(why, "two packages called " .. pkg.name .. " makes addressing impossible (to upgrade, remove the older package)")
-		end
-		hasName[pkg.name] = true
-		for k, v in pairs(pkg.provides) do
-			if provided[k] then
-				table.insert(why, pkg.name .. " provides " .. k .. " but it's provided by " .. providedWho[k] .. " too")
-			else
-				provided[k] = v
-				providedWho[k] = pkg.name
-			end
-		end
+-- Performs a shallow copy of a list or set
+ccmia.scopy = function (n)
+	local t = {}
+	for k, v in pairs(n) do
+		t[k] = v
 	end
-	for _, pkg in pairs(packages) do
-		for k, v in pairs(pkg.deps) do
-			if provided[k] then
-				if not provided[k]:fulfills(v) then
-					table.insert(why, pkg.name .. " needs " .. k .. " " .. v:toString() .. ", got " .. provided[k]:toString() .. " which is not compatible")
-				end
-			else
-				table.insert(why, pkg.name .. " needs " .. k .. " but it's not provided")
-			end
-		end
-	end
-	for k, v in pairs(bsp) do
-		if not provided[k] then
-			table.insert(why, v)
-		end
-	end
-	if #why == 0 then
-		return
-	end
-	return table.concat(why, "\n")
+	return t
 end
 
 ccmia.checkPath = function (path)

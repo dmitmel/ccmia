@@ -57,7 +57,9 @@ function ccmia.startRemote()
 	else
 		-- Local
 		ccmia.remote = {}
-		for _, v in ipairs(ng.fs.list(localPath)) do
+		local lst = ng.fs.list(localPath)
+		if not lst then error("unable to list " .. localPath) end
+		for _, v in ipairs(lst) do
 			if v:sub(-10) == ".ccmia-pkg" then
 				local iname = v:sub(1, -11)
 				local hf = io.open(localPath .. "/" .. v, "rb")
