@@ -1,0 +1,7 @@
+return {
+	name = "ccinjector-standardized-mods",
+	commit = "meta-0",
+	source = "metapackage",
+	provides = {["standardized-mods"] = "0.0"},
+	deps = {ccinjector = "0.0", ["plugin.mod-validator"] = "0.0", ["plugin.assets-manager"] = "0.0"}
+}

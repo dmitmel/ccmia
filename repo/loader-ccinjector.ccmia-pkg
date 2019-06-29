@@ -1,0 +1,7 @@
+return {
+	name = "loader-ccinjector",
+	commit = "656aeaefe37ff7b35b849e46dd011a4a25710fae",
+	source = "https://github.com/CCDirectLink/CCInjector",
+	provides = {loader = "0.0", ccinjector = "0.0"},
+	deps = {}
+}

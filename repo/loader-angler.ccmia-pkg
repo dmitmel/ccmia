@@ -1,0 +1,7 @@
+return {
+	name = "loader-angler",
+	commit = "ccmia-0",
+	source = "20kdc",
+	provides = {loader = "0.0"},
+	deps = {}
+}

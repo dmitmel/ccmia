@@ -1,0 +1,33 @@
+<html>
+ <body>
+  <h1>Angler Installation Agent</h1>
+  Yup, it's just a copy-paste of the other installation agent.
+  <script>//<!--
+  /*
+   * cc-angler - Mod to provide specific controller inputs
+   * Written starting in 2019 by contributors (see CREDITS.txt)
+   * To the extent possible under law, the author(s) have dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty.
+   * You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
+   */
+   // This is based off of the rapture code, but since there's no contributors to the Rapture code other than me...
+   var fs = require("fs");
+   var str = fs.readFileSync("assets/node-webkit.html", "utf8");
+   var strPre = str.substring(0, str.indexOf("</head>"));
+   var strPost = str.substring(str.indexOf("</head>"));
+   var scp = "script"; // html fun
+   str = strPre + "<" + scp + " type=\"text/javascript\" src=\"angler.js\"></" + scp + "><" + scp + " type=\"text/javascript\" src=\"angler-config.js\"></" + scp + ">" + strPost;
+   // Patch the HTML to insert more Angler
+   fs.writeFileSync("assets/angler-boot0.html.boot1.html", str, "utf8");
+   var json = JSON.parse(fs.readFileSync("package.json", "utf8"));
+   // Inject Rapture
+   json.main = "assets/angler-boot0.html.boot1.html";
+   // Restore these parts to original values
+   delete json.comm;
+   json.version = "0.2.2";
+   //
+   fs.writeFileSync("package.json", JSON.stringify(json), "utf8");
+   location.href += ".boot1.html";
+   //-->
+  </script>
+ </body>
+</html>

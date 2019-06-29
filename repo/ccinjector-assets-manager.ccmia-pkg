@@ -1,0 +1,7 @@
+return {
+	name = "ccinjector-assets-manager",
+	commit = "f62166fbf7f671dd720f1fab154c0b1ec9151563",
+	source = "https://github.com/ccinjector-plugins/assets-manager",
+	provides = {["plugin.assets-manager"] = "0.0"},
+	deps = {ccinjector = "0.0"}
+}

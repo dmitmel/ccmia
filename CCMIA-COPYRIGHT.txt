@@ -1,0 +1,15 @@
+CCMIA itself is licensed under CC0.
+
+    ccmia - package management for easy mod installation
+    Written starting in 2019.
+    To the extent possible under law, the author(s) have dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty.
+    You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
+
+CCMIA's package repository contains various other people's projects.
+
+Copies of these projects are hosted on the main repository mirror in a compressed,
+ slightly unusual, but standardized format (see the DEFLATE RFC and TAR file format details),
+ with any licensing details those projects have as part of their structure intact.
+
+(This may cause installed copies of projects to overwrite each other's licensing information, however.)
+

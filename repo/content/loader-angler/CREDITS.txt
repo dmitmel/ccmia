@@ -1,0 +1,4 @@
+Initialization/bootstrap is based off of the Rapture code, but since there's no contributors to the Rapture code other than me...
+Yeah, it's just me, 20kdc, for now
+
+

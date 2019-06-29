@@ -1,0 +1,12 @@
+[submodule "repo/content/loader-ccloader"]
+	path = repo/content/loader-ccloader
+	url = https://github.com/CCDirectLink/CCLoader
+[submodule "repo/content/loader-ccinjector"]
+	path = repo/content/loader-ccinjector
+	url = https://github.com/CCDirectLink/CCInjector
+[submodule "repo/content/ccinjector-assets-manager/assets/plugins/assets-manager"]
+	path = repo/content/ccinjector-assets-manager/assets/plugins/assets-manager
+	url = https://github.com/ccinjector-plugins/assets-manager
+[submodule "repo/content/ccinjector-mod-validator/assets/plugins/mod-validator"]
+	path = repo/content/ccinjector-mod-validator/assets/plugins/mod-validator
+	url = https://github.com/ccinjector-plugins/mod-validator

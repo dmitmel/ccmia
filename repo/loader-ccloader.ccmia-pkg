@@ -1,0 +1,7 @@
+return {
+	name = "loader-ccloader",
+	commit = "8aa732e4258db0cb70de9e743bfe717bb8588ce2",
+	source = "https://github.com/CCDirectLink/CCLoader",
+	provides = {loader = "0.0", ccloader = "0.0", ["standardized-mods"] = "0.0", ["mod.ccloader-version-display"] = "0.0", ["mod.openDevTools"] = "0.0", ["mod.simplify"] = "0.0"},
+	deps = {}
+}

@@ -1,0 +1,7 @@
+return {
+	name = "loader-vanilla",
+	commit = "ccmia-0",
+	source = "altered from CCInjector",
+	provides = {loader = "0.0"},
+	deps = {}
+}

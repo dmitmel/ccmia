@@ -1,0 +1,7 @@
+return {
+	name = "ccinjector-mod-validator",
+	commit = "2690e8d58daf749c43ec348ec7f80ff44782fe3a",
+	source = "https://github.com/ccinjector-plugins/mod-validator",
+	provides = {["plugin.mod-validator"] = "0.0"},
+	deps = {ccinjector = "0.0"}
+}
